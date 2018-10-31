@@ -18,4 +18,8 @@ export default {
   methods: {},
   computed: {}
 };
+<<<<<<< HEAD
 </script>
+=======
+</script>
+>>>>>>> f35889f9cef74790c2419cf46c90acf3ff17434b
