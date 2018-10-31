@@ -11,7 +11,7 @@
 export default {
   data: function() {
     return {
-      message: "Online Resume Test..1, ,2, 3!"
+      message: "Online Resumes Test..1, ,2, 3!"
     };
   },
   created: function() {},
