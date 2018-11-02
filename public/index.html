@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>online-resumes</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="css/yellow.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,800" rel="stylesheet"> 
+
   </head>
   <body>
     <noscript>
@@ -13,5 +25,110 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <!-- Core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- / Core JavaScript -->
+
+    <!-- preloader -->
+    <script src="js/preloader.js"></script>
+    <!-- / preloader -->
+
+    <!-- Smooth Scrolling -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/smooth-scroll-nonav.js"></script>
+    <!-- / Smooth Scrolling -->
+
+    <!-- menu-toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#icon-nav-wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    <!-- / menu-toggle Script -->
+
+    <!-- Portfolio Script -->
+    <script src="js/jquery.shuffle.min.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script>
+        $(document).ready(function(){
+            if (Modernizr.touch) {
+             // show the close overlay button
+                $(".close-overlay").removeClass("hidden");
+            // handle the adding of hover class when clicked
+                $(".img").click(function(e){
+            if (!$(this).hasClass("hover")) {
+                $(this).addClass("hover");
+            }
+        });
+        // handle the closing of the overlay
+        $(".close-overlay").click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            if ($(this).closest(".img").hasClass("hover")) {
+                $(this).closest(".img").removeClass("hover");
+            }
+        });
+            } else {
+            // handle the mouseenter functionality
+                $(".img").mouseenter(function(){
+                $(this).addClass("hover");
+        })
+            // handle the mouseleave functionality
+            .mouseleave(function(){
+                $(this).removeClass("hover");
+        });
+    }
+    });
+    </script>
+    <!-- / Portfolio Script -->
+
+    <!-- LightBox -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript">
+    // This will create a single gallery from all elements that have class "lightbox"
+        $('.lightbox').each(function() {
+        $(this).magnificPopup({
+            delegate: 'a.image-lightbox', // the selector for gallery item
+            type: 'image',
+            gallery: {
+          enabled:true
+        }
+    });
+    });
+    </script>
+    <!-- / LightBox -->
+
+    <!-- Tooltips -->
+    <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+    </script>
+    <!-- / Tooltips -->
+
+    <!-- Owl Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- / Owl Carousel -->
+
+    <!-- Facts Counter -->
+    <script src="js/jquery.countTo.js"></script>
+    <script type="text/javascript">
+        $('.timer').countTo({
+            refreshInterval: 60,
+            formatter: function (value, options) {
+            return value.toFixed(options.decimals);
+            },
+      });
+    </script>
+    <!-- / Facts Counter -->
+        <!-- Contact Form -->
+        <script src="js/contact-form-validator.min.js"></script>
+        <script src="js/contact-form.js"></script>
+        <!-- / Contact Form -->
   </body>
 </html>
